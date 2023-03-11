@@ -15,4 +15,4 @@ with open('recipes.txt', 'rt') as file:
         file.readline()
         cook_book[dish_name] = list_ingredients
         print(list_ingredients)
-    #pprint(cook_book)
+    #pprint(cook_book, sort_dicts=False)
