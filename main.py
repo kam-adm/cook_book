@@ -29,8 +29,11 @@ with open('recipes.txt', 'rt', encoding='utf-8') as file:
                             ingredient_list_by_dishes.setdefault(n['ingredient_name'], []).append(n['measure'] * person_count)
                             ingredient_list_by_dishes.setdefault(n['ingredient_name'], []).append(n['quantity'])
                         else:
-                            ingredient_list_by_dishes[ingredient_name][0] += ingredient_list_by_dishes[ingredient_name][0]
+                            g = int(n['measure'])
+                            ingredient_list_by_dishes[ingredient_name][0] += g
 
         pprint(ingredient_list_by_dishes)
 
-    get_shop_list_by_dishes(['Омлет', 'Запеченный картофель', 'Фахитос'], 1)
+    get_shop_list_by_dishes(['Омлет', 'Запеченный картофель', 'Фахитос'], 2)
+
+
